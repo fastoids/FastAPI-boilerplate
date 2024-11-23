@@ -19,7 +19,7 @@ class AppSettings(BaseSettings):
 
 
 class CryptSettings(BaseSettings):
-    SECRET_KEY: str = config("SECRET_KEY")
+    SECRET_KEY: str = config("SECRET_KEY", default="4728d416e6165245af50a382e1715edd40c7adddc38b2179b9d6ed406fd48168")
     ALGORITHM: str = config("ALGORITHM", default="HS256")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = config("ACCESS_TOKEN_EXPIRE_MINUTES", default=30)
     REFRESH_TOKEN_EXPIRE_DAYS: int = config("REFRESH_TOKEN_EXPIRE_DAYS", default=7)
